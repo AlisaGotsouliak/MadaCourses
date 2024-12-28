@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>תכנות 3 - שיעור 1</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/bootstrap.rtl.min.css">
+    <link href="styles/reset.css" rel="stylesheet"/>
+    <link href="styles/styles.css" rel="stylesheet"/>
+
+    <!-- JS -->
+    <script src="jScripts/javascript.js"></script>
+    <script src="jScripts/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+<div id="container">
+    <nav>
+        <button id="nav-button" class="btn-mobile" onclick="toggleNav()"><img src="images/nav-icon.svg"
+                                                                              alt="ניווט"></button>
+        <div id="main-nav" class="flex-container-nav hide-mobile">
+            <ul>
+                <li><a href="#">דף הבית</a></li>
+                <li><a href="#">הקורסים שלנו</a></li>
+                <li><a href="#">אודות</a></li>
+                <li><a href="#">יצירת קשר</a></li>
+            </ul>
+            <div>
+                <p>
+                    התמונות באתר זה
+                    <br/>
+                    לקוחות מאתר
+                    <a href="https://www.canva.com/">Canva</a>
+                    <br/>
+                    "©sketchify via Canva.com"
+                </p>
+            </div> 
+        </div>
+        
+    </nav>
+    <main>
+        <header>
+            <h1>
+                קורסים ועזרה ראשונה
+            </h1>
+
+            <div class="input-group">
+                <input type="search" id="searchBar" placeholder="חיפוש קורס..." class="form-control"/>
+                <button id="searchButton" class="btn">חיפוש</button>
+            </div>
+        </header>
+        
+
+        <div id="filtersContainer">
+            <button type="button" id="btnEmergency" class="btn filterByTag">רפואת חירום</button>
+            <button type="button" id="btnFirstAid" class="btn filterByTag">עזרה ראשונה</button>
+            <button type="button" id="btnCorona" class="btn filterByTag">קורונה</button>
+        </div>
+            
+
+            <div id="Courses">
+
+            </div>
+        
+    </main>
+</div>
+</body>
+<footer>
+    <div>
+        <p>
+            התמונות באתר זה לקוחות מאתר
+            <a href="https://www.canva.com/">Canva</a>
+            <br/>
+            "©sketchify via Canva.com"
+        </p>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,481 @@
+﻿:root {
+    font-size: 16px;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-nav ul {
+    padding: 0;
+}
+
+#main-nav div{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#main-nav div p{
+    width: 100%;
+}
+
+#main-nav div p a{
+    color: black;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    color: black;
+}
+
+.flip-card-back {
+    background-color: white;
+    border-radius: 0.375rem;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back h2 {
+    background-color: #D23A35;
+    color: white;
+    height: 4rem;
+    border-radius: 0.375rem 0.375rem 0 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.flip-card-back p {
+    text-align: right;
+}
+
+.flip-card-back p:first-of-type {
+    padding: 1.5rem;
+}
+
+.flip-card-back p:nth-child(n+2):nth-child(-n+5) {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.flip-card-back p:nth-child(n+2):nth-child(-n+5) span {
+    font-weight: bold;
+}
+
+/* Add a class to trigger the flip effect */
+.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-body h4 {
+    margin: 0;
+    height: 3rem;
+    font-size: 18px;
+    width: 100%;
+}
+
+.card-body button {
+    margin-top: 0.5rem;
+}
+
+.topOfCard {
+    width: 100%;
+    height: 67%;
+    background-color: #E1DBEC;
+    padding: 0.5rem;
+}
+
+.topOfCard img {
+    height: 100%;
+}
+
+
+/*נאב*/
+.flex-container-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+/*התפריט יוסתר כל עוד המסך קטן*/
+.flex-container-nav.hide-mobile {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    z-index: 2;
+}
+
+/*הכפתור להצגת התפריט יוצע כל עוד המסך קטן*/
+#nav-button {
+    display: block;
+    position: fixed;
+    z-index: 3;
+}
+
+#nav-button img {
+    filter: brightness(0) invert(1); /*makes the svg white*/
+}
+
+.flex-container-nav {
+    position: fixed;
+    height: 100vh;
+    width: 60vw;
+    background-color: #F4D783;
+    padding-top: 4rem;
+    z-index: 1;
+    padding-right: 0;
+    box-shadow: -30px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+h1 {
+    margin-bottom: 3rem;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 4.5rem;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+button img {
+    height: 3rem;
+    width: 3rem
+}
+
+header {
+    width: 100vw;
+    height: 14rem;
+    position: fixed;
+    z-index: 1;
+    justify-content: center;
+    background-image: url("../images/HeaderBG.svg");
+    background-repeat: no-repeat;
+}
+
+/*filter tags*/
+.input-group {
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+    justify-self: center;
+}
+
+.input-group button {
+    background-color: #F4D783 !important;
+    color: black;
+    border: none;
+    transition: none;
+}
+
+.input-group button:active {
+    background-color: #F8E6B2 !important;
+}
+
+
+#searchBar {
+    border: none;
+}
+
+#filtersContainer {
+    position: fixed;
+    z-index: 1;
+    height: 3.5rem;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#filtersContainer button {
+    height: 2rem;
+}
+
+#Courses, #filtersContainer {
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-self: center;
+    top: 14rem;
+
+}
+
+
+#Courses {
+    gap: 3rem;
+    padding-top: 1.5rem;
+    max-height: 70vh;
+    min-height: 70vh;
+    position: absolute;
+    top: 18rem;
+    overflow-y: auto;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+#Courses::-webkit-scrollbar {
+    display: none;
+}
+
+.filterByTag {
+    background-color: white;
+    border: 1px solid #D23A35;
+    color: #D23A35;
+    display: flex;
+    align-items: center;
+}
+
+.filterByTagActive {
+    background-color: #D23A35;
+    border: 1px solid #D23A35;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+footer {
+    display: none;
+}
+
+/*----------------------------------------------------Desktop----------------------------------------------------*/
+
+@media only screen and (min-width: 920px) {
+    :root {
+        font-size: 24px;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+    
+    /* הצגת התפריט פתוח במסך גדול */
+    .flex-container-nav.hide-mobile {
+        display: flex;
+        flex-direction: row;
+        background-color: #051E32;
+        height: 2.5rem;
+        width: 100%;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    .flex-container-nav {
+        padding: 0
+    }
+    
+    #main-nav{
+        height: 2rem;
+    }
+
+    #main-nav ul {
+        display: flex;
+        flex-direction: row;
+        height: 2rem;
+    }
+
+    #main-nav ul li {
+        align-self: center;
+        margin: 0;
+        padding: 0.5rem;
+
+    }
+
+    #main-nav ul li:hover {
+        background-color: #0A3A62;
+    }
+
+    #main-nav ul li a {
+        color: white;
+        font-weight: normal;
+        font-size: 0.8rem;
+    }
+
+
+    #main-nav div {
+        display: none;
+    }
+    
+    h1 {
+        margin-bottom: 2rem;
+        font-size: 42px;
+        margin-top: 3rem;
+    }
+
+    .input-group{
+        width: 80%;
+    }
+
+    .input-group button{
+        border: none !important;
+    }
+
+    header, .filterContainer, nav, .flex-container-nav {
+        position: relative;
+    }
+
+    header {
+        height: 12rem;
+        width: 100%;
+
+        background-size: cover ;
+
+    }
+
+    /* הכפתור להצגת התפריט יוסתר במסך גדול */
+    #nav-button {
+        display: none;
+    }
+
+    #filtersContainer {
+        justify-content: center;
+        gap: 3rem;
+        position: relative;
+        top: 0;
+    }
+
+
+    .filterByTag:hover {
+        background-color: #D23A35;
+        border: 1px solid #D23A35;
+        color: white;
+    }
+ 
+    #Courses {
+        gap: 2rem;
+        overflow-y: visible;
+        min-height: auto;
+        max-height: none;
+        position: relative;
+        top: 0;
+        padding-bottom: 6rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    
+    .flip-card-back h2, .card-body h4 {
+        font-size: 24px;
+    }
+
+    .card-body h4 {
+        height: 4rem;
+        align-content: center;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    
+    .card-body {
+        padding: 0 !important;
+    }
+
+    .card-body button{
+        margin-top: 0;
+    }
+
+    .flip-card-back p:nth-child(n+2):nth-child(-n+5) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .flip-card-back p:first-of-type {
+        padding: 1rem;
+        margin: 0 !important;
+    }
+
+    .flip-card {
+        width: 14.5rem;
+        height: 14.5rem;
+        margin-bottom:1.5rem;
+    }
+    
+    .flip-card-inner {
+        width: 100%;
+        height: 100%;
+    }
+    
+    footer{
+        height: 3rem;
+        display: flex;
+        align-self: flex-end;
+        align-items: center;
+        justify-content: center;
+        background-color: #0A3A62;
+        position: relative;
+        top: 0
+    }
+
+    footer p{
+        font-size: 0.8rem;
+        text-align: center;
+        color: white;
+        line-height: 1rem;
+    }
+
+    footer p a{
+        color: white;
+    }
+    
+}
